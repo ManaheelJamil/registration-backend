@@ -5,13 +5,11 @@ const authRoutes = require('./routes/auth');
 
 const app = express();
 
-// ✅ Step 1: Define allowed origins
 const allowedOrigins = [
   'http://localhost:5000',
   'https://registration-frontend-rose.vercel.app'
 ];
 
-// ✅ Step 2: Use cors middleware with those origins
 app.use(cors({
   origin: allowedOrigins
 }));
