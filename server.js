@@ -18,7 +18,7 @@ app.use(cors({
 app.use(express.json());
 
 // ✅ Step 4: Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/registration')
+mongoose.connect(process.env.MONGODB_URL)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
